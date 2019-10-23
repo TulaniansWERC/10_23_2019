@@ -2,5 +2,6 @@
 
 Willi was here
 
-
 (Better attendance helps us  get pizza money)
+Add your callsign:
+

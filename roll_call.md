@@ -6,4 +6,9 @@ Willi was here (I was here twice)
 Add your callsign:
 
 Luke was here too!!!
+<<<<<<< HEAD
 Kaushik esta aqui tambien
+=======
+
+Kiah's here!
+>>>>>>> 54948214929bc2accd9f86cc365ff81433335526

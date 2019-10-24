@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitTut</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="turf-github-tutorial-making-your-own-directories.">TURF GitHub tutorial: Making your own directories.</h1>
+<p>This tutorial will teach you how to start your own GitHub projects from the command line in Windows and MacOS.</p>
+<p>First we need to learn how to run Git on our personal computers. Git is a “version control” tool that lets users collaborate on files while keeping the file history intact so that previous versions are never lost. This can be useful for non-collaborative projects as well when we need to keep track of our edits.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>For Windows users, I prefer to use  a Linux environment which can be installed on Windows 10 computers. To install Linux in Windows, follow the instructions provided <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">here</a>.</li>
+<li>Register an account on <a href="https://github.com/">GitHub</a>.</li>
+</ul>
+<h2 id="installing-git">Installing Git</h2>
+<p>You may need to install Git. Begin by opening a command line through the Terminal (MacOS) or your Linux distribution (Windows).</p>
+<p>Check whether Git is installed with the command:<br>
+<code>git --version</code></p>
+<p><strong>In MacOS</strong> this will automatically prompt you to install Git if it is not available.<br>
+<strong>In Linux</strong> you may install git with the command: <code>sudo apt install git-all</code>. This command may vary depending on your Linux distribution. See <a href="https://git-scm.com/download/linux">this link</a> for detailed instructions on what command to use.</p>
+<h2 id="initializing-git">Initializing Git</h2>
+<p>First we will <strong>configure Git with our GitHub account details</strong>. GitHub is a hosting solution that allows us to easily share our Git repositories with other users.</p>
+<p>To set your account details in git:<br>
+<code>git config --global user.name "Your GitHub username"</code><br>
+<code>git config --global user.email "Your GitHub account email"</code></p>
+<p>Git can also operate independently of GitHub, or with other hosting options such as BitBucket or GitLab.</p>
+<p>We can also <strong>set our default text editor</strong> for Git. By default, Git will use the Vim editor on the command line. Command line text editors can be confusing for users who are not used to working in this environment. I recommend using nano for those that are new to the command line, but Vim provides a more robust experience for those that are open to learning a new tool.<br>
+<code>git config --global core.editor "nano -w"</code><br>
+<code>git config --global core.editor "vim"</code></p>
+<p>You can check your configuration with the command:<br>
+<code>git config --list</code></p>
+<h2 id="your-first-repository">Your first repository</h2>
+<p>A repository is where Git saves the old versions of our files. We make repositories inside of the directory that we are working in. <strong>Let’s start by making a new working directory</strong>. I will provide command line code for those that are new to working this way.</p>
+<p><code>mkdir GitTut</code><br>
+<code>cd GitTut</code></p>
+<p>With these commands, we have made a “GitTut” directory to work in, and then navigated into the directory with the “cd” command. Now that we are in our working directory, we <strong>create a Git repository with the command</strong>:<br>
+<code>git init</code></p>
+<p>To see our new repository in the directory, use the command:<br>
+<code>ls -a</code></p>
+<p>You will see an output like this:<br>
+<img src="https://lh3.googleusercontent.com/53AWkB9AAu6mjhANJxFOvEWwmK2C0C3PLohbr1oO-NroeuVO3aUpRHn-tiUE3XRuENYvZGLBXG_R" alt="enter image description here"><br>
+The “.git” directory indicates that a repository has been created for your working directory. All subdirectories within your working directory will also be backed up in this repository.</p>
+<p>We can also <strong>check the project status</strong> with the command:<br>
+<code>git status</code></p>
+<p>You will see this output:<br>
+<img src="https://lh3.googleusercontent.com/qJy3VX2_gcbe6LmCRUfQrUln4HqB3EeTiig0hh7hvVg-MXCwbBI6uWDIWfcfF1fVBy9-3BUToNqt" alt="enter image description here"><br>
+For now, this means all is good! We will be returning to this status screen often.</p>
+<h2 id="tracking-file-changes">Tracking file changes</h2>
+<p>Now we are on to the bread and butter of using Git. Make sure that you are still in your “GitTut” directory before proceeding. You can check your current directory with the command <code>pwd</code>.</p>
+<p>Create a new text file in your working directory:<br>
+<code>nano text.txt</code></p>
+<p>This command creates a new text file “text.txt” and opens the nano text editor (this can alternatively be done with the text editor of your choice, including GUI based options like Word).  Enter some text into the file, then exit nano with ctrl+x. Nano will automatically prompt you to save when exiting.</p>
+<p>Let’s again check the project status:<br>
+<code>git status</code></p>
+<p>We now see:<br>
+<img src="https://lh3.googleusercontent.com/BUplRELmLCzwiJb8Z2O0z8gdnk8n0OBR-wSiK42aCe2KgmgLPOAzW7pqZG5K-FbJFQivU27blEal" alt="enter image description here"></p>
+<p>We now have an untracked file, “text.txt”. This simply means this file is new to the directory and has not yet been added to the repository. We can <strong>track a new file</strong> with the command:<br>
+<code>git add text.txt</code></p>
+<p>Again, check the project status:<br>
+<img src="https://lh3.googleusercontent.com/hG_LikP-Vj2XaWSAQ9Vj8ERNl4VaqHQFv9UNSZ5Tz_6IufdXJM213Vpy1BgK6vwrFfPW8178irAh" alt="enter image description here"><br>
+The new file is now being tracked but has not yet been committed.</p>
+</div>
+</body>
+
+</html>
